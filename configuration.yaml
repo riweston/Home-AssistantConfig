@@ -49,15 +49,15 @@ history:
 logbook:
 
 # Sensors
-sensor: !include_dir* sensors
+sensor: !include_dir_list sensors
 
 # Text to speech
 tts:
   - platform: google
 
 group: !include groups.yaml
-automation: !include_dir* automation
+automation: !include_dir_list automation
 
-media_player: !include_dir* media_player
+media_player: !include_dir_list media_player
 
-remote: !include_dir* remote
+remote: !include_dir_list remote
