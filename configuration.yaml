@@ -71,3 +71,7 @@ tts:
 
 group: !include groups.yaml
 automation: !include_dir* automation
+
+media_player: !include_dir* media_player
+
+remote: !include_dir* remote
