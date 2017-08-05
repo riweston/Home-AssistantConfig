@@ -2,12 +2,16 @@ alias: "Turn off Receiver When Sonos Connect Stops"
 hide_entity: false
 initial_state: true
 trigger:
-  entity_id: media_player.living_room
-  from: playing
-  platform: state
-  to: paused
-  for:
-    minutes: 10
+  - platform: state
+    entity_id: media_player.living_room
+    to: paused
+    for:
+      minutes: 10
+  - platform: state
+    entity_id: media_player.living_room
+    to: stopped
+    for:
+      minutes: 10
 condition: 
   condition: and
   conditions: 
