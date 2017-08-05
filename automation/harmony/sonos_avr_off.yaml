@@ -6,14 +6,14 @@ trigger:
   from: playing
   platform: state
   to: paused
+  for:
+    minutes: 10
 condition: 
   condition: and
   conditions: 
     - condition: state
       entity_id: media_player.living_room
       state: paused
-      for: 
-        minutes: 10
     - condition: state
       entity_id: sensor.harmony
       state: "Sonos - Living Room"
