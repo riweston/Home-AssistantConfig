@@ -61,3 +61,5 @@ automation: !include_dir_list automation
 media_player: !include_dir_list media_player
 
 remote: !include_dir_list remote
+
+mqtt: !include_dir_list mqtt
