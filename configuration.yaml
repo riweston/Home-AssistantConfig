@@ -6,9 +6,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/London
 
-# Show links to resources in log and frontend
-introduction:
-
 # Enables the frontend
 frontend:
 
@@ -62,4 +59,25 @@ media_player: !include_dir_list media_player
 
 remote: !include_dir_list remote
 
-mqtt: !include_dir_list mqtt
+mqtt:
+  broker: core-mosquitto
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+switch: !include_dir_list switch
+
+emulated_hue:
+
+panel_iframe:
+  nodered_flows:
+    title: 'Node-RED Flows'
+    url: 'http://hassio.local:1880'
+    icon: mdi:nodejs
+
+device_tracker:
+  - platform: owntracks_http
+    waypoints: True
+
+zone: !include_dir_list zone
+
+map:
