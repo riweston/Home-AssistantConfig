@@ -80,10 +80,6 @@ device_tracker:
 
 zone: !include_dir_list zone
 
-<<<<<<< HEAD
 map:
 
 logger:
-=======
-map:
->>>>>>> 43e57541a0c09c9daa1997355656e46426a28654
