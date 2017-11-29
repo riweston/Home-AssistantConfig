@@ -1,0 +1,16 @@
+alias: "Turn on Receiver When Sonos Connect Plays"
+hide_entity: false
+initial_state: true
+trigger:
+  platform: state
+  entity_id: media_player.living_room
+  to: playing
+condition: 
+  condition: state
+  entity_id: sensor.harmony
+  state: 'PowerOff'
+action:
+  service: remote.turn_on
+  data: 
+    activity: 24593350
+    entity_id: remote.harmony_hub

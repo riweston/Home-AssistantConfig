@@ -1,0 +1,12 @@
+alias: "Ungroup/Stop Sonos When Harmony Switches"
+hide_entity: false
+initial_state: true
+trigger:
+  platform: state
+  entity_id: sensor.harmony
+  from: "Sonos - Living Room"
+action:
+  - service: media_player.sonos_unjoin
+    entity_id: media_player.living_room
+  - service: media_player.media_stop
+    entity_id: media_player.living_room

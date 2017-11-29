@@ -1,0 +1,33 @@
+alias: "Turn off Receiver When Sonos Connect Stops"
+hide_entity: false
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: media_player.living_room
+    to: paused
+    for:
+      minutes: 10
+  - platform: state
+    entity_id: media_player.living_room
+    to: stopped
+    for:
+      minutes: 10
+condition: 
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sensor.harmony
+      state: "Sonos - Living Room" 
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: media_player.living_room
+          state: paused
+        - condition: state
+          entity_id: media_player.living_room
+          state: stopped
+action: 
+  - service: remote.turn_off
+    entity_id: remote.harmony_hub
+  - service: media_player.sonos_unjoin
+    entity_id: media_player.living_room
