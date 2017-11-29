@@ -1,5 +1,9 @@
 platform: mqtt
+<<<<<<< HEAD
 name: "Worktop Lights"
+=======
+name: "Kitchen Worktop Lights"
+>>>>>>> 43e57541a0c09c9daa1997355656e46426a28654
 command_topic: "cmnd/sonoff/power"
 state_topic: "stat/sonoff/POWER"
 qos: 1

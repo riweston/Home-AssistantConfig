@@ -1,5 +1,9 @@
 alias: "Turn off Receiver When Sonos Connect Stops"
+<<<<<<< HEAD
 hide_entity: false
+=======
+hide_entity: true
+>>>>>>> 43e57541a0c09c9daa1997355656e46426a28654
 initial_state: true
 trigger:
   - platform: state

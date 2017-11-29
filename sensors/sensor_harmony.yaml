@@ -2,4 +2,8 @@ platform: template
 sensors:
   harmony:
     value_template: '{{ states.remote.harmony_hub.attributes.current_activity }}'
+<<<<<<< HEAD
     friendly_name: 'Harmony Hub'
+=======
+    friendly_name: 'Living Room'
+>>>>>>> 43e57541a0c09c9daa1997355656e46426a28654

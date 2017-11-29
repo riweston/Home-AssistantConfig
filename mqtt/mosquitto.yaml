@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 broker: core-mosquitto
+=======
+broker: localhost
+>>>>>>> 43e57541a0c09c9daa1997355656e46426a28654
